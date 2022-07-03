@@ -17,17 +17,16 @@ function DisplayLocations() {
     console.log(data);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
+    // debugger
 
-  // return data.locations.map(({ id, name, description, photo }) => (
-  //     <div key={id}>
-  //       <h3>{name}</h3>
-  //       <img width="400" height="250" alt="location-reference" src={`${photo}`} />
-  //       <br />
-  //       <b>About this location:</b>
-  //       <p>{description}</p>
-  //       <br />
-  //     </div>
-  // ));
+  return data.users.map(({ id, name, email }) => (
+      <div key={id}>
+        <h3>{name}</h3>
+        <b>Email:</b>
+        <p>{email}</p>
+        <br />
+      </div>
+  ));
 }
 
 export default function App() {
